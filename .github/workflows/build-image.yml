@@ -14,8 +14,10 @@ jobs:
     # https://docs.github.com/en/actions/how-tos/write-workflows/choose-where-workflows-run/choose-the-runner-for-a-job#standard-github-hosted-runners-for-public-repositories
     runs-on: ubuntu-latest
 
+    # https://docs.github.com/en/actions/concepts/security/github_token?utm_source=chatgpt.com#about-the-github_token
+    # https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#permissions
     permissions:
-      contents: read
+      #contents: read
       packages: write
 
     steps:
