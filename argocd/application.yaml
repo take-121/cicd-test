@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: myapp
+  name: nginx
   namespace: argocd
 spec:
   project: default
 
   source:
-    repoURL: https://github.com/<ユーザー名>/my-container-test.git
+    repoURL: https://github.com/take-121/cicd-test.git
     targetRevision: main
     path: k8s
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: myapp
+    namespace: default
 
   syncPolicy:
     automated:
